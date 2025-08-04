@@ -1,10 +1,9 @@
 // controllers/authController.js
 
-const bcrypt = require("bcrypt");
 import bcrypt from "bcrypt";
 import User from "../models/User.js";
 
-const signup = async (req, res) => {
+const authController = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
@@ -39,4 +38,4 @@ const signup = async (req, res) => {
   }
 };
 
-export { signup };
+export default authController;
